@@ -1,0 +1,164 @@
+.flip-card {
+  perspective: 1000px;
+  width: 320px;
+  height: 380px;
+  margin: 20px auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+.flip-card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  /* background-image: url("../assets/Branch1.png"); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+.flip-card-front1 {
+  background-image: url("../assets/Branch1.png");
+}
+.flip-card-back1 {
+  background-color: white;
+}
+.flip-card-front2 {
+  background-image: url("../assets/Branch2.jpg");
+}
+.flip-card-back2 {
+  background-color: white;
+  color: black;
+}
+.flip-card-front3 {
+  background-image: url("../assets/Branch9.png");
+}
+.flip-card-back3 {
+  background-color: white;
+}
+.flip-card-front4 {
+  background-image: url("../assets/Branch11.png");
+}
+.flip-card-back4 {
+  background-color: white;
+}
+.flip-card-front5 {
+  background-image: url("../assets/Branch10.png");
+}
+.flip-card-back5 {
+  background-color: white;
+}
+.flip-card-front6 {
+  background-image: url("../assets/Branch8.png");
+}
+.flip-card-back6 {
+  background-color: white;
+}
+.flip-card-front7 {
+  background-image: url("../assets/Branch12.png");
+}
+.flip-card-back7 {
+  background-color: white;
+}
+.flip-card-front8 {
+  background-image: url("../assets/Branch3.jpg");
+}
+.flip-card-back8 {
+  background-color: white;
+}
+.flip-card-front9 {
+  background-image: url("../assets/Branch6.png");
+}
+.flip-card-back9 {
+  background-color: white;
+}
+.flip-card-front10 {
+  background-image: url("../assets/Branch4.jpg");
+}
+.flip-card-back10 {
+  background-color: white;
+}
+.flip-card-front {
+  z-index: 2;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+.inner {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+}
+
+.iconSize {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  text-align: center;
+  padding: 5px;
+  background-color: white;
+}
+
+.inner h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.inner p {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+}

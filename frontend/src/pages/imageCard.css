@@ -1,0 +1,64 @@
+.imgcontainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.Imgcard {
+  position: relative;
+  height: 350px;
+  width: 350px;
+  box-shadow: 5px 5px 20px black;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.Imgcard:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+.images3 {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Intro overlay area */
+.intro {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  color: white;
+  transition: all 0.4s ease;
+}
+
+/* "Hero" is always visible */
+.intro h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+/* Paragraph is hidden initially */
+.intro p {
+  margin-top: 10px;
+  font-size: 16px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease, max-height 0.4s ease;
+}
+
+/* On hover, show the paragraph */
+.Imgcard:hover .intro p {
+  opacity: 1;
+  max-height: 100px;
+}
